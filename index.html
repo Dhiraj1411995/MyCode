@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>TASK 4B</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <link href="quiz-jsjson.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+
+<body>
+
+    <div class="card text-center" id="div_card">
+        <div class="card-header">
+            TASK 4B
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">A Simple Quiz Application Using JavaScript & JSON</h5>
+            <p class="card-text">This test has total 20 questions and each question has equal weightage of 5 marks and
+                total marks will be 100.<p>You have 10 minutes to complete your quiz and if you run out of time then
+                    your responses will automatically be submitted.</p>
+                <p>You can change your previously given responses within the alloted time by simply using previous
+                    button.</p>
+                <p>There is negative marking of one-fourth of the weightage of concerned question so you must have to
+                    answer each of the questions carefully.</p>
+                <p>You will be awarded 0 for the question which is not answered.</p>
+            </p>
+            <a href="#" class="btn btn-primary" onclick="start_test()">Start Test</a>
+        </div>
+        <div class="card-footer" style="color:white;">
+            Developed By - Dhiraj Kumar
+        </div>
+    </div>
+
+    <div id="mycontainer" class="mycontainer" style="display:none;">
+        <div class="title"><img src="graduation.png" style="float:left;margin-left: 10px;margin-top: 10px;" />Simple
+            Quiz Application in JSON and JS</div>
+        <div id="ques" class="question"></div>
+        <label class="option">
+            <input type="radio" name="option" onchange="change_func(this)">
+            <span class="options"></span>
+        </label>
+        <label class="option">
+            <input type="radio" name="option" onchange="change_func(this)">
+            <span class="options"></span>
+        </label>
+        <label class="option">
+            <input type="radio" name="option" onchange="change_func(this)">
+            <span class="options"></span>
+        </label>
+        <label class="option">
+            <input type="radio" name="option" onchange="change_func(this)">
+            <span class="options"></span>
+        </label>
+        <button id="next" class="nxt" onClick="nxtQuestion();">Next</button>
+        <button id="prev" class="prev" onClick="prevQuestion();" style="display: none;">Prev</button>
+        <div style="float:left;margin-left: 10px;">
+            <span id="time-left">Time Left ::</span>
+            <input id="minutes" type="text"
+                style="width: 25px;text-align: center;border:none;font-size: 16px;font-weight: bold; color: black;">
+            mins :<input id="seconds" type="text"
+                style="width: 25px;border:none;text-align: center; font-size: 16px;font-weight: bold; color: black;">
+            secs
+        </div>
+    </div>
+
+    <!--<div id="res" class="mycontainer result" style="display:none;">
+        <span id="get-result"></span>
+    </div>-->
+
+    <div class="card text-center" style="display:none;" id="res">
+        <div class="card-header">
+            <ul class="nav nav-tabs card-header-tabs">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#" onclick="summary()" id="link1">Quiz Summary</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="detail()" id="link2">Detailed View</a>
+                </li>
+                <!--<li class="nav-item">
+                    <a class="nav-link" href="#" onclick="precise()" id="link3">Precise View</a>
+                </li>-->
+            </ul>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title" id="finaltitle"></h5>
+            <p class="card-text" id="res1"></p>
+            <p class="card-text" id="res2" style="display: none;"></p>
+            <a href="javascript:window.location.reload(true)" class="btn btn-primary">Start Test Again</a>
+        </div>
+        <div class="card-footer">
+            Thanks For Visiting, Please Come Again!!!
+        </div>
+    </div>
+
+    <script src="questions.js"></script>
+    <script src="quiz-json.js"></script>
+    <script src="countdown-timer.js"></script>
+
+    <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
