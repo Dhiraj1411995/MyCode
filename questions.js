@@ -65,6 +65,13 @@ var allquestions = [{
     "options": ["Octal and gate","Octal and binary","Binary and hexadecimal","Octal and hexadecimal"], 
     "ans": "Octal and hexadecimal",
     "userselection":null
+},
+
+{
+    "ques": "What is the MIME type of JSON?",  
+    "options":  ["application/x-json","text/json","application/json","application/javascript"],
+    "ans": "application/json",
+    "userselection":null
 }
 
 ]
