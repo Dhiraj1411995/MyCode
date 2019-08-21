@@ -67,11 +67,4 @@ var allquestions = [{
     "userselection":null
 },
 
-{
-    "ques": "What is the MIME type of JSON?",  
-    "options":  ["application/x-json","text/json","application/json","application/javascript"],
-    "ans": "application/json",
-    "userselection":null
-}
-
 ]
